@@ -1,0 +1,189 @@
+.flex {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+
+.plus {
+    padding: 1px 8.8px 4px 9.8px;
+    border: solid 1px#fff;
+    background-color: #00afd8;
+    color: #fff;
+    font-size: 20px;
+}
+
+.fliter {
+    border: unset;
+    background: unset;
+}
+
+.Failed {
+    // height: 24px;
+    // background: green;
+    position: relative;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+    padding-bottom: 5px;
+    line-height: 24px;
+    display: inline-block;
+}
+
+.Failed::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top: 33px solid white;
+    border-left: 58px solid transparent;
+    width: 0;
+}
+
+button {
+    border: unset;
+}
+
+.Tasks button {
+    width: 272.9px;
+    font-family: Arial;
+    font-size: 18px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fff;
+    padding: 7px;
+    background-color: #d5d5d5;
+}
+
+.Rectangle-19 {
+    margin: -3px 1px;
+    padding: 21.4px 18.5px 24.9px 19px;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.16);
+    border: solid 1px #858585;
+    background-color: #fbfbfb;
+}
+
+p,
+h2 {
+    margin-bottom: 0;
+}
+
+.tab_list {
+    display: flex;
+    align-items: center;
+    margin: 0 0.5px 9.8px 0;
+    padding: 15px;
+    border: solid 1px #ccc;
+    background-color: #e5f4ff;
+    justify-content: space-between;
+}
+
+.Status::before {
+    content: "";
+    border: 1px solid #b5b5b5;
+    width: 1px;
+    height: 44px;
+    padding: 0px;
+    margin-right: 13px;
+}
+
+.Status {
+    display: flex;
+    align-items: center;
+}
+
+.tab_list h2 {
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #070707;
+}
+
+.tab_list p {
+    font-size: 12px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #aaa;
+}
+
+.Rectangle-25 {
+    background: unset;
+}
+
+.Status img {
+    margin-right: 7px;
+}
+
+.state {
+    margin-right: 38px;
+}
+
+button.scheduled {
+    margin: 0px 15.8px 0px 0;
+    padding: 5px 12px 5px 10px;
+    border-radius: 10.5px;
+    background-color: #b4b4b4;
+}
+
+label {
+    font-size: 11px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+}
+
+.progress {
+    border: solid 1px #0090ff;
+    border-radius: 0;
+    margin-bottom: 3.5px;
+}
+
+.progress.success {
+    border: solid 1px #12bb12 !important;
+}
+
+.progress.danger {
+    border: solid 1px #f57277 !important;
+}
+
+.style {
+    width: 165px;
+}
+
+@media(max-width:787px) {
+    .tab_list {
+        display: flex;
+        align-items: flex-start;
+        margin: 0 0.5px 9.8px 0;
+        padding: 15px;
+        border: solid 1px #ccc;
+        background-color: #e5f4ff;
+        flex-direction: column;
+        align-content: flex-start;
+    }
+    .style {
+        width: 165px;
+        margin-left: 22px;
+        margin-bottom: 15px;
+    }
+    .Status {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+}

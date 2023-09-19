@@ -1,0 +1,55 @@
+<div class="tab_list" [style.borderLeft]="'19px solid ' + task?.color ">
+    <div class="style">
+        <p>Name</p>
+        <h2>{{task?.title | slice:0:20}}</h2>
+        <p>{{task?.suk}}</p>
+    </div>
+    <div class="Status">
+        <img [src]="task?.image">
+        <div class="state">
+            <p>Status</p>
+            <h2>{{task?.status}}</h2>
+        </div>
+    </div>
+    <div class="Status">
+        <img src="./assets/date icon.png">
+        <div class="state">
+            <p>Creation Date</p>
+            <h2>{{task?.date}} {{task?.time}}</h2>
+        </div>
+    </div>
+
+    <div class="Status">
+        <div class="state">
+            <p>Selection Criteria</p>
+            <div class="form-check" *ngFor="let check of task?.selection">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <label class="form-check-label" for="flexCheckChecked">
+              {{check?.name}}
+            </label>
+            </div>
+        </div>
+    </div>
+    <div class="Status">
+        <div class="state">
+            <p>Operations</p>
+            <div class="form-check" *ngFor="let check of task?.Operations">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <label class="form-check-label" for="flexCheckChecked">
+                  {{check?.name}}
+          </label>
+            </div>
+        </div>
+    </div>
+    <div class="Status">
+        <div class="state">
+            <p>Tsk (210)</p>
+            <div *ngFor="let progressbars of task?.progressbar" [class]="'progress ' + progressbars.class">
+                <div class="progress-bar" [class.bg-success]="progressbars.class_div === 'bg-success'" [class.bg-danger]="progressbars.class_div === 'bg-danger'" role="progressbar" aria-label="Example with label" [style.width]="progressbars?.width + '%'" [attr.aria-valuenow]="progressbars?.valuenow"
+                    aria-valuemin="0" aria-valuemax="100">{{progressbars?.name}}</div>
+            </div>
+        </div>
+        <button class="scheduled">Scheduled</button>
+        <button class="Rectangle-25"><img src="./assets/Arrow.png"></button>
+    </div>
+</div>

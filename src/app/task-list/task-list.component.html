@@ -1,0 +1,26 @@
+<div class="container-fluid">
+
+    <div class="flex">
+        <div class="Tasks">
+            <button [ngClass]="{'active': selectedTab === 'tasks'}" (click)="selectTab('tasks')">Tasks</button>
+            <button [ngClass]="{'active': selectedTab === 'schedules'}" (click)="selectTab('schedules')">Schedules</button>
+            <button [ngClass]="{'active': selectedTab === 'failedSubTasks'}" (click)="selectTab('failedSubTasks')" class="Failed">Failed SubTasks</button>
+        </div>
+        <div class="Rectangle">
+            <button class="plus">+</button>
+            <button class="fliter"><img src="./assets/Filter Logo.png"></button>
+        </div>
+    </div>
+    <div class="Rectangle-19">
+        <ng-container *ngFor="let task of taskList | paginate: { itemsPerPage: tableSize, currentPage: page, totalItems: count }; let i = index">
+            <app-task-component [task]="task"></app-task-component>
+        </ng-container>
+        <div class="d-flex justify-content-right">
+            <pagination-controls previousLabel="Prev" nextLabel="Next" (pageChange)="onTableDataChange($event)">
+            </pagination-controls>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Powered By <img src="./assets/Group 27.png"> ELSewedy Electrometer</p>
+    </div>
+</div>
