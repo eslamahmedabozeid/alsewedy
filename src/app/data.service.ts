@@ -18,8 +18,8 @@ export class DataService {
           { name: 'Demo District 1', checked: false },
         ],
         progressbar : [
-          { width: 50, valuenow: 50 , class:'success',class_div:'bg-success',name:'120' },
-          { width: 40, valuenow: 40 , class:'',class_div:'',name:'70' },
+          { width: 70, valuenow: 70 , class:'success',class_div:'bg-success',name:'120' },
+          { width: 50, valuenow: 50 , class:'',class_div:'',name:'70' },
           { width: 30, valuenow: 30 , class:'danger',class_div:'bg-danger',name:'20' },
         ],
       },
