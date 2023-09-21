@@ -250,7 +250,7 @@ describe('TaskListComponent', () => {
   },
 ];
 
-    component.tasks = mockTasks;
+    component.taskList = mockTasks;
     component.currentPage = 1;
     component.itemsPerPage = 14;
 
