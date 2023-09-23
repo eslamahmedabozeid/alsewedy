@@ -19,7 +19,6 @@ export class TaskListComponent implements OnInit {
 
   ngOnInit(): void {
     this.taskList = this.dataService.getMockData();
-    console.log("data" ,this.taskList)
   }
   onTableDataChange(event: any) {
     this.page = event;
